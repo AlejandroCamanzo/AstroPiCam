@@ -2,7 +2,7 @@ import io
 import logging
 import socketserver
 import subprocess
-from light import Light
+#from light import Light
 from picamera import PiCamera
 from threading import Condition
 from http import server

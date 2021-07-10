@@ -11,7 +11,7 @@ from http import server
 global buttonDictionary
 
 # Import HTML page from file, better for maintenance and changes
-PAGE = codecs.open("main.html", 'r', 'utf-8')
+PAGE = codecs.open("~/AstroPiCam/main.html", 'r', 'utf-8')
 
 class StreamingOutput(object):
 	def __init__(self):
@@ -197,7 +197,7 @@ def startStream(camera, running, parentStatusDictionary, parentButtonDictionary)
 	global buttonDictionary
 	statusDictionary = parentStatusDictionary
 	buttonDictionary = parentButtonDictionary
-	camera.resolution = (1920, 1080)
+	camera.resolution = (2028, 1520)
 	camera.framerate = 30
 
 	output = StreamingOutput()
@@ -222,7 +222,7 @@ def resumeStream(camera, running, parentStatusDictionary, parentButtonDictionary
 	global buttonDictionary
 	statusDictionary = parentStatusDictionary
 	buttonDictionary = parentButtonDictionary
-	camera.resolution = (1920, 1080)
+	camera.resolution = (2028, 1520)
 	camera.framerate = 30
 	output = StreamingOutput()
 	camera.start_recording(output, format='mjpeg')

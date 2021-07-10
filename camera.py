@@ -17,7 +17,7 @@ version = '2021.07.10'
 
 camera = PiCamera()
 PiCamera.CAPTURE_TIMEOUT = 1500
-#camera.resolution = camera.MAX_RESOLUTION
+camera.resolution = (2028,1520)
 # HQ camera
 # Mode 2 is a 2x2 binned mode, less resolution but more light capture and higher frame rate
 # Mode 3 is the full framerate, but limited to 10 fps
@@ -38,8 +38,8 @@ shutterShort = 0
 defaultFramerate = 50
 
 iso = 'auto'
-isoMin = 50 # the minimum ISO for HQ is 43
-isoMax = 600 # the maximum ISO for HQ is 690
+isoMin = 45 # the minimum ISO for HQ is 43
+isoMax = 650 # the maximum ISO for HQ is 690
 
 exposure = 'auto'
 
@@ -57,8 +57,8 @@ outputFolder = 'dcim/'
 
 timer = 0
 
-raw = False
-
+raw = True
+#raw = False
 
 
 # === Echo Control =============================================================

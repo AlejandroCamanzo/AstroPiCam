@@ -38,7 +38,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
 		global statusDictionary
 		global buttonDictionary
 		if self.path == '/':
-			contentEncoded = PAGE.encode('utf-8')
+			contentEncoded = PAGE.read().encode('utf-8')
 			self.send_response(200)
 			self.send_header('Content-Type', 'text/html')
 			self.send_header('Content-Length', len(contentEncoded))

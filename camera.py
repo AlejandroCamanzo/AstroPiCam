@@ -28,8 +28,8 @@ running = False
 statusDictionary = {'message': '', 'action': '', 'colorR': 0, 'colorG': 0, 'colorB': 0, 'colorW': 0}
 buttonDictionary = {'switchMode': 0, 'shutterUp': False, 'shutterDown': False, 'isoUp': False, 'isoDown': False, 'evUp': False, 'evDown': False, 'bracketUp': False, 'bracketDown': False, 'capture': False, 'captureVideo': False, 'isRecording': False, 'lightR': 0, 'lightB': 0, 'lightG': 0, 'lightW': 0, 'trackball': False, 'exit': False}
 
-outputLog = open('/home/pi/camera.remote/logs/output.log', 'w+')
-errorLog = open('/home/pi/camera.remote/logs/error.log', 'w+')
+outputLog = open('/home/pi/AstroPiCam/logs/output.log', 'w+')
+errorLog = open('/home/pi/AstroPiCam/logs/error.log', 'w+')
 
 shutter = 'auto'
 shutterLong = 200000 # maximum shutter speed in ms (200 s for HQ Cam)

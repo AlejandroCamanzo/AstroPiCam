@@ -32,14 +32,14 @@ outputLog = open('/home/pi/AstroPiCam/logs/output.log', 'w+')
 errorLog = open('/home/pi/AstroPiCam/logs/error.log', 'w+')
 
 shutter = 'auto'
-shutterLong = 120000 # maximum shutter speed in ms (200 s for HQ Cam)
+shutterLong = 60000 # maximum shutter speed in ms (200 s for HQ Cam)
 shutterLongThreshold = 1000
 shutterShort = 0
 defaultFramerate = 50
 
 iso = 'auto'
 isoMin = 50 # the minimum ISO for HQ is 43
-isoMax = 800 # the maximum ISO for HQ is 690
+isoMax = 600 # the maximum ISO for HQ is 690
 
 exposure = 'auto'
 
@@ -57,7 +57,7 @@ outputFolder = 'dcim/'
 
 timer = 0
 
-raw = True
+raw = False
 
 
 

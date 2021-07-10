@@ -13,12 +13,15 @@ import threading
 import time
 
 
-version = '2021.04.06'
+version = '2021.07.10'
 
 camera = PiCamera()
 PiCamera.CAPTURE_TIMEOUT = 1500
-camera.resolution = camera.MAX_RESOLUTION
-camera.sensor_mode = 3
+#camera.resolution = camera.MAX_RESOLUTION
+# HQ camera
+# Mode 2 is a 2x2 binned mode, less resolution but more light capture and higher frame rate
+# Mode 3 is the full framerate, but limited to 10 fps
+camera.sensor_mode = 2
 camera.framerate = 30
 dng = RPICAM2DNG()
 running = False
@@ -29,7 +32,7 @@ outputLog = open('/home/pi/camera.remote/logs/output.log', 'w+')
 errorLog = open('/home/pi/camera.remote/logs/error.log', 'w+')
 
 shutter = 'auto'
-shutterLong = 30000
+shutterLong = 200000 # maximum shutter speed in ms (200 s for HQ Cam)
 shutterLongThreshold = 1000
 shutterShort = 0
 defaultFramerate = 30
@@ -123,7 +126,7 @@ def setShutter(input, wait = 0):
 			roundedShutter = '{:.3f}'.format(floatingShutter)
 			if shutter > shutterLongThreshold:
 				print(' Shutter Speed: ' + str(roundedShutter)  + 's [Long Exposure Mode]')
-				statusDictionary.update({'message': ' Shutter Speed: ' + str(roundedShutter)  + 's [Long Exposure Mode]'})
+				statusDictionary.update({'message': ' Shutter Speed: ' + str(roundedShutter) + 's [Long Exposure Mode]'})
 			else:
 				print(' Shutter Speed: ' + str(roundedShutter) + 's')
 				statusDictionary.update({'message': ' Shutter Speed: ' + str(roundedShutter) + 's'})

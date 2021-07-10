@@ -1,3 +1,7 @@
+# AstroPiCam
+
+This repo is a fork of Camera Remote, a web interface for Raspberry Pi Cam, with modifications aimed at astrophotography and long exposure photography. With or without a telescope.
+
 # Camera Remote
 
 Combining this program with a Raspberry Pi HQ camera, a Raspberry Pi Zero WH, and an Adafruit 16-LED NeoPixel ring will result in a camera that can be controlled via a web page.
